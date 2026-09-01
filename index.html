@@ -3,29 +3,73 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Adrian Zucco — Talks</title>
-  <meta name="description" content="Slide decks and workshop materials for talks and workshops, each with a stable permanent link." />
+  <title>Adrian G. Zucco — Talks &amp; Workshops</title>
+  <meta name="description" content="Slides, workshop material and supplementary information for talks and workshops by Adrian G. Zucco, each with a stable permanent link." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='6' fill='%23ea580c'/%3E%3Ccircle cx='5' cy='7' r='3' fill='%23ea580c' opacity='.6'/%3E%3Ccircle cx='27' cy='24' r='3' fill='%23ea580c' opacity='.6'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300..800;1,300..800&display=swap" />
   <link rel="stylesheet" href="assets/style.css" />
+  <script>
+    // Set the appearance before first paint to avoid a flash of the wrong theme.
+    (function () {
+      var stored = null;
+      try { stored = localStorage.getItem("appearance"); } catch (e) {}
+      var dark = stored ? stored === "dark"
+        : !window.matchMedia("(prefers-color-scheme: light)").matches;
+      if (dark) document.documentElement.classList.add("dark");
+    })();
+  </script>
 </head>
 <body>
-  <div class="wrap">
-    <header class="page-header">
-      <h1>Talks &amp; Workshops</h1>
-      <div class="meta">Stable links for slides and QR codes — content is updated in place.</div>
-    </header>
+  <canvas id="particles" aria-hidden="true"></canvas>
 
-    <section>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="https://adrianzucco.com/">Adrian G. Zucco
+        <span class="brand-sub">adrianzucco.com</span></a>
+      <nav class="site-nav">
+        <a href="https://adrianzucco.com/publication/">Publications</a>
+        <a href="https://github.com/adrigabzu/presentations">Source</a>
+        <button class="theme-toggle" type="button" aria-label="Switch theme" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M2.5 12h2M19.5 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.2 8.2 0 1 0 10.2 10.2z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="page-header">
+      <span class="kicker">Presentations</span>
+      <h1>Talks &amp; Workshops</h1>
+      <p class="lede">
+        Slides, workshop material and supplementary information. Each page keeps
+        a permanent link, so QR codes printed on a deck stay valid while the
+        content behind them is updated.
+      </p>
+    </div>
+
+    <section class="section">
       <h2>2026</h2>
+
       <a class="card" href="sphc-2026-workshop/">
-        <h2>SPHC 2026 Workshop</h2>
-        <div class="meta">Details to follow</div>
-        <span class="badge">Placeholder</span>
+        <h3>Addressing the complexity in the room</h3>
+        <div class="meta">
+          Workshop · Swiss Public Health Conference 2026 · 2 September 2026,
+          Lucerne
+        </div>
+        <span class="badge">Workshop material</span>
       </a>
     </section>
 
     <footer class="page-footer">
-      Source on <a href="https://github.com/">GitHub</a>.
+      <span>Adrian G. Zucco · Copenhagen Health Complexity Center</span>
+      <span class="spacer"></span>
+      <a href="https://github.com/adrigabzu/presentations">Source on GitHub</a>
     </footer>
-  </div>
+  </main>
+
+  <script src="assets/site.js"></script>
 </body>
 </html>

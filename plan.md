@@ -53,8 +53,15 @@ presentations/                          ← repo root
 - Each talk page is a single self-contained `index.html`.
 - Keep `<title>` and meta description accurate per talk (helps if the link
   is ever shared outside the QR code / slides).
-- Optional: shared styling lives in `/assets/style.css`, linked from each
-  talk page, to keep a consistent look without duplicating CSS everywhere.
+- Shared styling lives in `/assets/style.css` and shared behaviour in
+  `/assets/site.js`, linked from every talk page, to keep a consistent look
+  without duplicating CSS everywhere. Both mirror the design tokens of
+  adrianzucco.com (Raleway, stone neutrals, orange primary, rose secondary)
+  and support light/dark, sharing the `appearance` localStorage key with the
+  personal site.
+- Every page needs the small inline `<script>` in `<head>` that sets the
+  `dark` class before first paint (copy it from an existing page) — without it
+  the page flashes the wrong theme.
 
 ## Tasks for Claude Code
 - [ ] Scaffold the repo structure locally as above.
