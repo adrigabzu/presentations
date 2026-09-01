@@ -253,6 +253,21 @@ html.dark .theme-toggle .icon-moon {
   display: none;
 }
 
+/* Floating appearance switcher, for pages without a site header */
+
+.theme-float {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 60;
+}
+
+.theme-float .theme-toggle {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+}
+
 /* ---------- Page header ---------- */
 
 .page-header {
@@ -721,6 +736,7 @@ tbody td:first-child {
 @media print {
   #particles,
   .site-header,
+  .theme-float,
   .theme-toggle,
   .qr {
     display: none !important;
