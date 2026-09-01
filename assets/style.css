@@ -110,6 +110,7 @@ body {
   inset: 0;
   z-index: -10;
   pointer-events: none;
+  filter: blur(2px);
 }
 
 h1,
